@@ -1,0 +1,129 @@
+<section class="contacts"> <!-- contacts start -->
+    <div class="container">
+        <h2 class="main__title anim-items">Контакты</h2>
+        <div class="arrow">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_95_3502" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="46"
+                    height="46">
+                    <rect width="46" height="46" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_95_3502)">
+                    <path
+                        d="M7.29954 33.9937L10.4207 16.2928C10.5166 15.7489 11.0353 15.3857 11.5792 15.4816L13.3494 15.7938C13.8922 15.8895 14.2552 16.4064 14.161 16.9495L12.2056 28.2187L37.601 10.4366L39.7997 13.5767L14.4043 31.3588L25.69 33.3487C26.2373 33.4452 26.6009 33.9695 26.4995 34.5159L26.1661 36.314C26.066 36.8536 25.5497 37.2117 25.0092 37.1164L7.29954 33.9937Z"
+                        fill="#0600CC" />
+                </g>
+            </svg>
+        </div>
+        <div class="contacts-wrapper">
+            <div class="contacts__left">
+                <form class="contacts__form">
+                    <h2 class="form__title _black">Форма обратной связи</h2>
+                    <!-- при неправильном заполнении поля form__input добавляется класс error -->
+                    <div class="input__wrapper">
+                        <input type="text" class="form__input" placeholder="Имя*">
+                        <p class="error-message">Поле заполнено не верно</p>
+                    </div>
+                    <div class="input__wrapper">
+                        <input type="tel" class="form__input phone-mask" placeholder="Телефон*">
+                        <p class="error-message">Поле заполнено не верно</p>
+                    </div>
+                    <div class="input__wrapper">
+                        <input type="email" class="form__input" placeholder="E-mail*">
+                        <p class="error-message">Поле заполнено не верно</p>
+                    </div>
+                    <h2 class="form__title">Выберите услугу</h2>
+                    <div class="choise-service">
+                        <div class="radio__wrapper">
+                            <input type="radio" id="web-servise"  value="Веб-сервис" name="service" class="service__radio" checked>
+                            <label for="web-servise" class="service__radio-label">Веб-сервис</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="online-store" value="Интернет-магазин" name="service" class="service__radio">
+                            <label for="online-store"
+                                class="service__radio-label">Интернет-магазин</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="servise-website" value="Сайт услуг" name="service" class="service__radio">
+                            <label for="servise-website" class="service__radio-label">Сайт услуг</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="landing-page" value="landing-page" name="service" class="service__radio">
+                            <label for="landing-page" class="service__radio-label">Landing page</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="business-website" value="Сайт-визитка" name="service" class="service__radio">
+                            <label for="business-website" class="service__radio-label">Сайт-визитка</label>
+                        </div>
+                        <div class="radio__wrapper">
+                            <input type="radio" id="corporate-website" value="Корпоративный сайт" name="service" class="service__radio">
+                            <label for="corporate-website" class="service__radio-label">Корпоративный сайт</label>
+                        </div>
+                    </div>
+
+                    <h2 class="form__title">Коротко о проекте:</h2>
+                    <textarea class="form__message" placeholder="Напишите пару слов на свое усмотрение"></textarea>
+
+                    <input type="checkbox" class="form__checkbox" id="contact__form-agree" checked>
+                    <label for="contact__form-agree" class="form__checkbox-label">Согласен-(а) на обработку данных в
+                        соответствии с <a href="#!">политикой конфиденциальности.</a></label>
+                    <button type="submit" class="form__button">Отправить</button>
+                </form>
+                
+                <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script>
+                <div class="map" id="map"></div>
+                <script>
+                    const center =[61.779381, 34.368986];
+                    function init() {
+                        let map = new ymaps.Map('map', {
+                            center: center,
+                            zoom: 17,       
+                            controls: []
+                        });
+
+                        let placemark1 = new ymaps.Placemark(center, {    
+                        }, {
+                            iconLayout: 'default#image',
+                            iconImageHref: '../images/location.svg',
+                            iconImageSize: [40, 40],
+                            iconImageOffset: [-19, -44]
+                        });
+                        map.geoObjects.add(placemark1);
+                    }
+
+                    ymaps.ready(init);
+                </script>
+            </div>
+            <div class="contacts__right anim-items">
+                <div class="contacts__address">
+                    <h2 class="address__title _black">Контакты</h2>
+                    <div class="conact">
+                        <h3 class="contact__title">Телефон</h3>
+                        <span>Москва: <a href="tel:">+7 (999) 111-22-33</a> </span> <br>
+                        <span>Петрозаводск: <a href="tel:">+7 (911) 444-55-77</a> </span>
+                    </div>
+                    <div class="conact">
+                        <h3 class="contact__title">E-MAIL</h3>
+                        <span>info@softrest.ru</span>
+                    </div>
+                    <div class="conact">
+                        <h3 class="contact__title">название организации</h3>
+                        <span>ООО «Онего Веб-Софт»</span>
+                    </div>
+                    <div class="conact">
+                        <h3 class="contact__title">АДРЕС</h3>
+                        <span>г. Петрозаводск, ул. Володарского, д. 40</span>
+                    </div>
+                    <div class="conact">
+                        <h3 class="contact__title">инн</h3>
+                        <span>1000007230</span>
+                    </div>
+                    <div class="conact">
+                        <h3 class="contact__title">ОГРН</h3>
+                        <span>1231000001143 от 27 февраля 2023 г.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section> <!-- contacts end -->

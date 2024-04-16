@@ -1,0 +1,16 @@
+.breadcrumbs {
+    margin-top: 27px;
+    margin-bottom: 50px;
+
+    a {
+        font-size: 14px;
+        line-height: 155%;
+        font-weight: 600;
+    }
+}
+
+@media(max-width:450px) {
+    .breadcrumbs {
+        margin: 7px 0 16px 0;
+    }
+}

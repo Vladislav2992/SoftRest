@@ -1,0 +1,12 @@
+.running-string {
+    display: flex;
+    gap: 22px;
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+    background-color: $yellow;
+    color: $blue;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 13px 0;
+    width: 500%;
+}

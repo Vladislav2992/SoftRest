@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftRest</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html">                    
+                    <img src="images/logo.svg" alt="SoftRest" class="logo">
+                </a>
+            </div>
+
+            <nav class="header__menu">
+                <div class="logo-white">
+                    <a href="index.html">
+                        <img src="images/logo-white.svg" alt="SoftRest" class="logo">
+                    </a>
+                </div>
+                <div class="close-btn">
+                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5.25293" y="0.0713806" width="25" height="2.66667" rx="1.33333" transform="rotate(45 5.25293 0.0713806)"
+                            fill="white" />
+                        <rect x="3" y="17.6777" width="25" height="2.66667" rx="1.33333" transform="rotate(-45 3 17.6777)" fill="white" />
+                    </svg>                        
+                </div>
+                <ul class="header__menu-list">
+                    <li class="header__menu-item"><a href="services.html">Услуги</a></li>
+                    <li class="header__menu-item"><a href="blog.html">Блог</a></li>
+                    <li class="header__menu-item"><a href="contacts.html">Контакты</a></li>
+                </ul>
+
+                <div class="header__contacts-buttons">
+                    <a href="tel:" class="btn">+7 (999) 111-22-33</a>
+                    <a href="tel:" class="btn">+7 (911) 444-55-77</a>
+                    <a href="mailto:info@softrest.ru" class="header__mail mail">info@softrest.ru</a>
+                </div>
+    
+                <div class="language">
+                    <button class="language-btn">
+                        <span>Русский</span>
+                           <img src="images/ru.svg" alt="" class="lang-img">
+                    </button>
+                    <ul class="language-list">
+                        <li data-value="ru" class="language-item ">
+                            <span>Русский</span>
+                            <img src="images/ru.svg" alt="" class="lang-img">
+                        </li>
+                        <li data-value="en" class="language-item active">
+                            <span class="english">English</span>
+                            <img src="images/eng.svg" alt="" class="lang-img">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+<main>
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="#!">Главная</a> | <a href="#!">Услуги</a>
+        </div>
+    </div>
+    <section class="contacts"> <!-- contacts start -->
+        <div class="container">
+            <h2 class="main__title anim-items">Контакты</h2>
+            <div class="arrow">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_95_3502" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="46"
+                        height="46">
+                        <rect width="46" height="46" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_95_3502)">
+                        <path
+                            d="M7.29954 33.9937L10.4207 16.2928C10.5166 15.7489 11.0353 15.3857 11.5792 15.4816L13.3494 15.7938C13.8922 15.8895 14.2552 16.4064 14.161 16.9495L12.2056 28.2187L37.601 10.4366L39.7997 13.5767L14.4043 31.3588L25.69 33.3487C26.2373 33.4452 26.6009 33.9695 26.4995 34.5159L26.1661 36.314C26.066 36.8536 25.5497 37.2117 25.0092 37.1164L7.29954 33.9937Z"
+                            fill="#0600CC" />
+                    </g>
+                </svg>
+            </div>
+            <div class="contacts-wrapper">
+                <div class="contacts__left">
+                    <form class="contacts__form">
+                        <h2 class="form__title _black">Форма обратной связи</h2>
+                        <!-- при неправильном заполнении поля form__input добавляется класс error -->
+                        <div class="input__wrapper">
+                            <input type="text" class="form__input" placeholder="Имя*">
+                            <p class="error-message">Поле заполнено не верно</p>
+                        </div>
+                        <div class="input__wrapper">
+                            <input type="tel" class="form__input phone-mask" placeholder="Телефон*">
+                            <p class="error-message">Поле заполнено не верно</p>
+                        </div>
+                        <div class="input__wrapper">
+                            <input type="email" class="form__input" placeholder="E-mail*">
+                            <p class="error-message">Поле заполнено не верно</p>
+                        </div>
+                        <h2 class="form__title">Выберите услугу</h2>
+                        <div class="choise-service">
+                            <div class="radio__wrapper">
+                                <input type="radio" id="web-servise"  value="Веб-сервис" name="service" class="service__radio" checked>
+                                <label for="web-servise" class="service__radio-label">Веб-сервис</label>
+                            </div>
+                            <div class="radio__wrapper">
+                                <input type="radio" id="online-store" value="Интернет-магазин" name="service" class="service__radio">
+                                <label for="online-store"
+                                    class="service__radio-label">Интернет-магазин</label>
+                            </div>
+                            <div class="radio__wrapper">
+                                <input type="radio" id="servise-website" value="Сайт услуг" name="service" class="service__radio">
+                                <label for="servise-website" class="service__radio-label">Сайт услуг</label>
+                            </div>
+                            <div class="radio__wrapper">
+                                <input type="radio" id="landing-page" value="landing-page" name="service" class="service__radio">
+                                <label for="landing-page" class="service__radio-label">Landing page</label>
+                            </div>
+                            <div class="radio__wrapper">
+                                <input type="radio" id="business-website" value="Сайт-визитка" name="service" class="service__radio">
+                                <label for="business-website" class="service__radio-label">Сайт-визитка</label>
+                            </div>
+                            <div class="radio__wrapper">
+                                <input type="radio" id="corporate-website" value="Корпоративный сайт" name="service" class="service__radio">
+                                <label for="corporate-website" class="service__radio-label">Корпоративный сайт</label>
+                            </div>
+                        </div>
+    
+                        <h2 class="form__title">Коротко о проекте:</h2>
+                        <textarea class="form__message" placeholder="Напишите пару слов на свое усмотрение"></textarea>
+    
+                        <input type="checkbox" class="form__checkbox" id="contact__form-agree" checked>
+                        <label for="contact__form-agree" class="form__checkbox-label">Согласен-(а) на обработку данных в
+                            соответствии с <a href="#!">политикой конфиденциальности.</a></label>
+                        <button type="submit" class="form__button">Отправить</button>
+                    </form>
+                    
+                    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script>
+                    <div class="map" id="map"></div>
+                    <script>
+                        const center =[61.779381, 34.368986];
+                        function init() {
+                            let map = new ymaps.Map('map', {
+                                center: center,
+                                zoom: 17,       
+                                controls: []
+                            });
+    
+                            let placemark1 = new ymaps.Placemark(center, {    
+                            }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: '../images/location.svg',
+                                iconImageSize: [40, 40],
+                                iconImageOffset: [-19, -44]
+                            });
+                            map.geoObjects.add(placemark1);
+                        }
+    
+                        ymaps.ready(init);
+                    </script>
+                </div>
+                <div class="contacts__right anim-items">
+                    <div class="contacts__address">
+                        <h2 class="address__title _black">Контакты</h2>
+                        <div class="conact">
+                            <h3 class="contact__title">Телефон</h3>
+                            <span>Москва: <a href="tel:">+7 (999) 111-22-33</a> </span> <br>
+                            <span>Петрозаводск: <a href="tel:">+7 (911) 444-55-77</a> </span>
+                        </div>
+                        <div class="conact">
+                            <h3 class="contact__title">E-MAIL</h3>
+                            <span>info@softrest.ru</span>
+                        </div>
+                        <div class="conact">
+                            <h3 class="contact__title">название организации</h3>
+                            <span>ООО «Онего Веб-Софт»</span>
+                        </div>
+                        <div class="conact">
+                            <h3 class="contact__title">АДРЕС</h3>
+                            <span>г. Петрозаводск, ул. Володарского, д. 40</span>
+                        </div>
+                        <div class="conact">
+                            <h3 class="contact__title">инн</h3>
+                            <span>1000007230</span>
+                        </div>
+                        <div class="conact">
+                            <h3 class="contact__title">ОГРН</h3>
+                            <span>1231000001143 от 27 февраля 2023 г.</span>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section> <!-- contacts end -->
+</main>   
+<footer class="footer">
+    <div class="running-string">
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+        <span>SoftRest.</span>
+    </div>    
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item"><a href="services.html">Услуги</a></li>
+                    <li class="footer__menu-item"><a href="blog.html">Блог</a></li>
+                    <li class="footer__menu-item"><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__contact-buttons">
+                <a href="tel:" class="btn">+7 (999) 111-22-33</a>
+                <a href="tel:" class="btn">+7 (911) 444-55-77</a>
+                <a href="mailto:info@softrest.ru" class="mail">info@softrest.ru</a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__logo">
+                <img src="images/logo-white.svg" alt="SoftRest">
+            </div>
+
+            <div class="footer__links">
+                <a href="#!" class="privacy-policy">Политика конфиденциальности</a>
+                <a href="#!" class="copyright">Онего Веб-Софт 2024 © Все права защищены.</a>
+            </div>
+        </div>
+    </div>
+</footer>
+ <div class="modal"> <!-- modal start -->
+     <div class="modal__overlay">
+         <div class="modal__content">
+             <div class="modal__close-btn">
+                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="25" cy="25" r="25" fill="#FEFF2D" />
+                     <path
+                         d="M20.65 31.45C20.0701 32.0299 19.1299 32.0299 18.55 31.45C17.9701 30.8701 17.9701 29.9299 18.55 29.35L22.9 25L18.5555 20.6857C17.9732 20.1074 17.9715 19.166 18.5518 18.5857C19.1307 18.0068 20.0693 18.0068 20.6482 18.5857L25 22.9375L29.3162 18.5912C29.8934 18.0098 30.8332 18.0082 31.4125 18.5875C31.9918 19.1668 31.9902 20.1066 31.4088 20.6838L27.0625 25L31.4143 29.3518C31.9932 29.9307 31.9932 30.8693 31.4143 31.4482C30.834 32.0285 29.8926 32.0269 29.3143 31.4445L25 27.1L20.65 31.45Z"
+                         fill="#0600CC" />
+                 </svg>
+             </div>
+             <h2 class="modal__title">
+                 <span class="fire">
+                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="25" cy="25" r="25" fill="#0600CC" />
+                         <g clip-path="url(#clip0_49_1870)">
+                             <path
+                                 d="M36 28.0338C36 33.5375 31.2969 38 25.5 38C19.7031 38 15 33.5375 15 28.0338C15 22.1581 21.9037 13.2988 24.5156 10.1619C24.5707 10.0855 24.649 10.0289 24.7389 10.0006C24.8287 9.97227 24.9253 9.97369 25.0143 10.0047C25.1032 10.0356 25.1798 10.0945 25.2327 10.1725C25.2855 10.2505 25.3117 10.3434 25.3075 10.4375C25.0844 13.0625 25.2375 18.68 29.9362 21.48C30.0302 21.5437 30.1453 21.5684 30.2572 21.5488C30.369 21.5292 30.4689 21.4669 30.5356 21.375C31.1245 20.5074 31.465 19.4953 31.52 18.4481C31.5251 18.352 31.5618 18.2602 31.6244 18.187C31.6871 18.1138 31.7721 18.0633 31.8663 18.0434C31.9605 18.0235 32.0587 18.0352 32.1456 18.0767C32.2325 18.1182 32.3032 18.1873 32.3469 18.2731C34.3463 21.5631 36 25.155 36 28.0338Z"
+                                 fill="#FF7F00" />
+                             <path
+                                 d="M18.9375 31.77C18.9375 35.2131 21.8775 38 25.5 38C29.1225 38 32.0625 35.2131 32.0625 31.77C32.0625 28.3269 28.2606 23.2344 26.445 21.0031C26.3906 20.9247 26.312 20.8662 26.2213 20.8365C26.1305 20.8069 26.0326 20.8077 25.9423 20.839C25.8521 20.8702 25.7746 20.9301 25.7216 21.0095C25.6686 21.0889 25.643 21.1835 25.6488 21.2788C25.7144 23.0288 25.4081 25.9906 22.8706 27.6006C22.8213 27.6333 22.7659 27.6556 22.7078 27.6662C22.6496 27.6769 22.5899 27.6756 22.5323 27.6625C22.4746 27.6494 22.4202 27.6248 22.3723 27.5901C22.3245 27.5554 22.2841 27.5114 22.2537 27.4606C22.0332 27.083 21.8849 26.6676 21.8162 26.2356C21.8063 26.1406 21.7654 26.0514 21.7 25.9817C21.6345 25.9121 21.5481 25.8658 21.4538 25.8499C21.3595 25.834 21.2627 25.8495 21.178 25.8938C21.0934 25.9382 21.0256 26.0091 20.985 26.0956C19.8344 28.0338 18.9375 30.0944 18.9375 31.77Z"
+                                 fill="#FFDA00" />
+                             <path
+                                 d="M29.1094 34.5744C29.0998 35.0371 28.9985 35.4933 28.8114 35.9166C28.6244 36.3398 28.3552 36.7218 28.0195 37.0404C27.6839 37.359 27.2884 37.6078 26.8559 37.7726C26.4234 37.9373 25.9626 38.0146 25.5 38C25.0374 38.0146 24.5766 37.9373 24.1441 37.7726C23.7116 37.6078 23.3161 37.359 22.9805 37.0404C22.6448 36.7218 22.3756 36.3398 22.1886 35.9166C22.0015 35.4933 21.9002 35.0371 21.8906 34.5744C21.8906 32.8813 23.5531 30.475 24.625 29.1013C24.6773 29.0261 24.7519 28.9692 24.8383 28.9387C24.9247 28.9081 25.0185 28.9055 25.1064 28.9311C25.1944 28.9567 25.2721 29.0093 25.3286 29.0814C25.3851 29.1536 25.4175 29.2416 25.4212 29.3331C25.4229 29.866 25.5413 30.3921 25.7681 30.8743C25.9948 31.3565 26.3244 31.7832 26.7337 32.1244C26.7872 32.1704 26.8511 32.2029 26.9198 32.2189C26.9885 32.2349 27.0601 32.2341 27.1284 32.2165C27.1968 32.1989 27.2598 32.165 27.3122 32.1177C27.3646 32.0704 27.4048 32.0112 27.4294 31.945C27.4555 31.8626 27.5055 31.7898 27.5729 31.7358C27.6404 31.6817 27.7224 31.6489 27.8085 31.6414C27.8946 31.6339 27.9811 31.6521 28.0568 31.6937C28.1326 31.7353 28.1944 31.7984 28.2344 31.875C28.7323 32.6944 29.0319 33.6187 29.1094 34.5744Z"
+                                 fill="white" />
+                         </g>
+                         <defs>
+                             <clipPath id="clip0_49_1870">
+                                 <rect width="21" height="28" fill="white" transform="translate(15 11)" />
+                             </clipPath>
+                         </defs>
+                     </svg>
+                 </span>
+                 Расскажите о Вашем <br> проекте. Поработаем вместе!
+             </h2>
+ 
+             <div class="modal__form-wrapper">
+                 <form class="modal__form">
+                
+                     <!-- при неправильном заполнении поля form__input добавляется класс error -->
+                     <div class="input__wrapper">
+                         <input type="text" class="form__input" placeholder="Имя*">
+                         <p class="error-message">Поле заполнено не верно</p>
+                     </div>
+                     <div class="input__wrapper">
+                         <input type="tel" class="form__input phone-mask" placeholder="Телефон*">
+                         <p class="error-message">Поле заполнено не верно</p>
+                     </div>
+                     <div class="input__wrapper">
+                         <input type="email" class="form__input" placeholder="E-mail*">
+                         <p class="error-message">Поле заполнено не верно</p>
+                     </div>
+     
+                     <h2 class="form__title">Коротко о проекте:</h2>
+                     <textarea class="form__message" placeholder="Напишите пару слов на свое усмотрение"></textarea>
+     
+                     <input type="checkbox" class="form__checkbox" id="modal__form-agree" checked>
+                     <label for="modal__form-agree" class="form__checkbox-label">Согласен-(а) на обработку данных в
+                         соответствии с <a href="#!">политикой конфиденциальности.</a></label>
+                     
+                     <!-- При успешной отправке сообщения modal__success должен получить класс active -->
+                     <button type="submit" class="form__button">Отправить</button>
+                 </form>
+             </div>
+ 
+             <div class="modal__success">
+                 <h2 class="modal__title">Мы получили ваше письмо и ответим в ближайшее время.</h2>
+                 <p>Если вы не получили ответное письмо, проверьте папку «спам». Если письма всё равно нет, то напишите нам ещё раз. Возможно, мы что-то упустили :(.</p>
+ 
+                 <img src="images/success.png" alt="">
+             </div>
+         </div>
+     </div>
+ </div> <!-- modal end -->
+ <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

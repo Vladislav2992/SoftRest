@@ -1,0 +1,250 @@
+.main {
+    padding: 47px 0 11px 0;
+    padding-top: clamp(26px, 7vw, 47px);
+    overflow-x: clip;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        #round-3 {           
+            bottom: 54%;
+            left: -70px;
+        }      
+    }
+
+    .running-string {
+        background-color: $green;
+    }
+}
+
+
+
+.main__text {
+    padding-top: 75px;
+}
+
+.main__title {
+    font-family: 'Exo2';
+    font-weight: 700;
+    font-size: clamp(28px, 5vw, 56px);
+    color: $blue;
+    margin-bottom: clamp(15px, 5vw, 35px);
+    line-height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s;
+
+    &._active {
+        opacity: 1;
+    }
+}
+
+.main__description {
+    font-family: 'Exo2';
+    font-weight: 700;
+    font-size: clamp(18px, 5vw, 36px);
+    line-height: 120%;
+    opacity: 0;
+    transition:  1.5s;
+
+    &._active {
+        opacity: 1;
+    }
+}
+
+.main__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+.main__img-wrapper {
+    position: relative;
+    margin-left: auto;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -7%;
+        left: 42%;
+        transform: translate(-50%, 50%);
+        width: 70px;
+        height: 97px;
+        background: url(../images/dots.svg) no-repeat center;
+        z-index: -1;
+    }
+
+    .round {
+        position: absolute;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.05);
+        background: linear-gradient(180deg, #feff2d 0%, #c1fd3a 100%);
+        bottom: -71px;
+        right: 105px;
+
+        &.blue {
+            background: $blue;
+            top: 20%;
+            right: -106px;
+        }
+    }
+   
+}
+
+
+
+.main__img {
+    opacity: 0;
+    transition: opacity 3.5s;
+    max-width: 470px;
+
+    &._active {
+        opacity: 1;
+    }
+}
+
+.main__btn-wrapper {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background-color: $green;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.main__btn {   
+    padding: 18px 65px;
+    font-weight: 700;
+    background-color: $green;
+    border: none;
+    font-family: 'Exo2';
+    font-size: clamp(14px, 7vw, 16px);
+    transform: translateY(100%);
+    transition: .7s ;
+    
+    &._active {
+        transform: translateY(0);
+    }
+}
+
+.main__down-btn {
+    padding: 19px 18px;
+    border: none;
+    border-radius: 15px;
+    background-color: $blue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition: transform .7s ;
+
+    &._active {
+        transform: scale(1);
+    }
+}
+
+.main__mail {
+    grid-column: 1/-1;
+    margin-left: auto;
+    color: $dark-grey;
+    margin-bottom: 51px;
+
+    &:before {
+        background-image: url('../images/mail-blue.svg');
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 33px;
+        width: 0;
+        height: 1px;
+        background-color: $blue;
+        transition: width .3s;
+    }
+    &:hover:after {
+        width: 79%;
+    }
+}
+
+.arrow-small {
+    display: none;
+}
+
+@media (max-width: 1180px) {
+    .main__title {
+        line-height: 120%;
+    }
+}
+
+@media (max-width: 950px) {
+    .main .container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .main__img-wrapper {
+        margin: 0 auto;
+    }
+
+    .main__mail {
+        display: none;
+    }
+
+    .main__text {
+        padding-top: 0;
+    }
+}
+@media (max-width: 500px) {
+    .main__btn {
+        padding-left: max(8vw,30px);
+        padding-right: max(8vw,30px);
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .main__down-btn {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main__img {
+        max-width: 100%;
+    }
+
+    .main__down-btn {
+        padding: 12px;
+    }
+    
+    .arrow-big {
+        display: none;
+    }
+    
+    .arrow-small {
+        display: block;
+    }
+    #round-1 {
+        width: 21px;
+        height: 21px;
+        bottom: 229px;
+        right: 0;
+    }
+    #round-2 {
+        top: 108%;
+        right: 81px;
+    }
+    .main .running-string {
+        font-size: 14px;
+        padding: 9px 0;
+    }
+    .main {
+        padding-bottom: 0;
+    }
+    .main__btn-wrapper {
+        top: 0;
+    }
+}
